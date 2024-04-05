@@ -30,3 +30,6 @@ If successful, terraform will output a `curl` command to run to test the deploym
 # remove all terraform AWS resources
 make destroy
 ```
+
+## Attribution
+Based on https://github.com/denoland/deno-lambda
