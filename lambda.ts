@@ -27,7 +27,7 @@ function maybeJson(headers: Headers, headerName: string) {
   return json
 }
 
-const mandatoryEnvVariable = (name: string): string => {
+export const mandatoryEnvVariable = (name: string): string => {
   const valueOrUndefined = Deno.env.get(name);
   if (! valueOrUndefined) {
     throw new Error(`Missing mandatory environment variable: ${name}`);
@@ -36,7 +36,7 @@ const mandatoryEnvVariable = (name: string): string => {
   return valueOrUndefined
 }
 
-const mandatoryHeader = (headers: Headers, name: string): string => {
+export const mandatoryHeader = (headers: Headers, name: string): string => {
   const valueOrUndefined = headers.get(name);
   if (! valueOrUndefined) {
     throw new Error(`Missing mandatory header: ${name}`);
